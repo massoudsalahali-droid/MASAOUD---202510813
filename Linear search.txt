@@ -1,0 +1,39 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string names[3];
+    int ages[3];
+    string key;
+    bool found = false;
+
+    // Input names and ages
+    for(int i = 0; i < 5; i++) {
+        cout << "Enter family member name: ";
+        cin >> names[i];
+
+        cout << "Enter age: ";
+        cin >> ages[i];
+    }
+
+    // Search name
+    cout << "Enter name to search: ";
+    cin >> key;
+
+    // Linear Search
+    for(int i = 0; i < 5; i++) {
+        if(names[i] == key) {
+            cout << key << " was found and age is "
+                 << ages[i] << endl;
+            found = true;
+            break;
+        }
+    }
+
+    if(found == false) {
+        cout << "Not Found" << endl;
+    }
+
+    return 0;
+}
